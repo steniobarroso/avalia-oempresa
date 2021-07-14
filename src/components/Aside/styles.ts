@@ -13,14 +13,14 @@ export const Title = styled.h3`
     color: ${props => props.theme.colors.white};
     margin-left: 10px;
 
-    @media(max-width: 600px){
+    /* @media(max-width: 600px){
         display: none;
-    }
-    
+    } */
+/*     
     @media(min-width: 600px){
         visibility: hidden;
         height:0px;
-    }
+    } */
 `;
 
 export const Header = styled.header`
@@ -189,6 +189,25 @@ justify-content: space-around;
     height:${props => props.iMenuIsOpen ? '100vh':'50px'} */
 }
 `;
+
+export const ContentMenu = styled.div<IMenu>`
+display:flex;
+flex-direction:column;
+justify-content: flex-start;
+
+@media(max-width:600px){
+    /* padding-left: 7px; */
+    visibility:${props => props.iMenuIsOpen ? 'visible':'hidden'};
+    
+    height:${props => props.iMenuIsOpen ? '90vh':'0vh'}
+}
+`;
+
+
+
+
+
+
 
 export const ContainsTextArea = styled.div<IMenu>`
 display:flex;

@@ -1,5 +1,5 @@
 import React,{useState,useEffect,LinkHTMLAttributes} from 'react';
-import {Container,MenuContainer,MenuItemLink,ContainsButtons,ContainsTextArea,Header,ToggleMenu,LogImg,Title} from './styles'
+import {ContentMenu,Container,MenuContainer,MenuItemLink,ContainsButtons,ContainsTextArea,Header,ToggleMenu,LogImg,Title} from './styles'
 import Button from '../Button';
 import Input from '../Input';
 import TextArea from '../TextArea';
@@ -70,7 +70,9 @@ const Aside: React.FC = () => {
                 <LogImg src={logoImg}  />
                 <Title>AVA TESTE</Title>
             </Header>
-              <MenuContainer iMenuIsOpen={toggleMenuIsOpened}>
+         <ContentMenu iMenuIsOpen={toggleMenuIsOpened}>
+                
+         <MenuContainer iMenuIsOpen={toggleMenuIsOpened}>
             {recover[0] != undefined ? recover.map(
                 item=>{
                     ++i
@@ -123,6 +125,9 @@ const Aside: React.FC = () => {
                         <TextArea iMenuIsOpen={toggleMenuIsOpened} onChange={(e) => {setAConteudo(e.target.value)}} iPaddingLeft='10px' aria-placeholder='#24455' iWidth='240px' iHeight='100px' iMarginTop='10px' iMarginBottom='10px' placeholder='Insira o conteudo...'/>
                 
                 </ContainsTextArea>
+               
+               
+         </ContentMenu>
                </Container>
     );
 }
